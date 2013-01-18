@@ -1,6 +1,0 @@
-category: Devel
-requires: python
-sdesc: "Finds common code segments in source trees"
-ldesc: "comparator and filterator are a pair of tools for rapidly 
-finding common code segments in large source trees. They can be useful 
-as tools for detecting copyright infringement."

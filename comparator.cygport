@@ -1,0 +1,27 @@
+inherit distutils
+
+NAME="comparator"
+VERSION=2.9
+RELEASE=1
+CATEGORY="Devel"
+SUMMARY="Finds common code segments in source trees"
+DESCRIPTION="comparator and filterator are a pair of tools for rapidly
+finding common code segments in large source trees. They can be useful
+as tools for detecting copyright infringement."
+HOMEPAGE="http://www.catb.org/~esr/${PN}/"
+SRC_URI="http://www.catb.org/~esr/${PN}/${P}.tar.gz"
+
+DIFF_EXCLUDES="test"
+
+src_compile() {
+	lndirs
+	cd ${B}
+	cygmake
+}
+
+src_install() {
+	cd ${B}
+	dobin ${PN}.exe filterator
+	doman ${PN}.1
+	distutils_install
+}
